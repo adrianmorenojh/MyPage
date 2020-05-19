@@ -1,8 +1,9 @@
 body {
-  background-color: #dedede;
+  background-color: #f1f3f4;
   margin: 0;
   color: #384148;
   font-family: "Merriweather Sans", sans-serif;
+  overflow-x: hidden;
 }
 .contact__button {
   width: 150px;
@@ -23,7 +24,8 @@ body {
   font-weight: 900;
   font-style: initial;
   font-size: 3em;
-  margin-bottom: 0px;
+  margin: 0px;
+  text-align: center;
 }
 .header {
   width: 100%;
@@ -69,6 +71,7 @@ body {
   padding-top: 20px;
   width: 75%;
   font-size: 1.1em;
+  margin-bottom: 30px;
 }
 
 .hero__image {
@@ -86,6 +89,7 @@ body {
   font-style: italic;
   font-weight: 600;
   color: #666;
+  margin: 15px 0;
 }
 .hero__info-parrafo a {
   color: #384148;
@@ -95,11 +99,37 @@ body {
 .sobreMi {
   display: flex;
   width: 100vw;
+  margin: 25px 0 0;
+  /* background-color: #384148; */
 }
 .sobreMi__image {
   width: 50%;
-  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.sobreMi__image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 175px;
+}
+
 .sobreMi__info {
   width: 50%;
+  padding: 20px 100px;
+  box-sizing: border-box;
+  font-style: italic;
+  color: #666;
+  font-weight: 500;
+  font-size: 18px;
+}
+.button__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.span {
+  color: black;
+  font-weight: 700;
 }
