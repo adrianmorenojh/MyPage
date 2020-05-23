@@ -4,6 +4,7 @@ body {
   color: #384148;
   font-family: "Merriweather Sans", sans-serif;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 .contact__button {
   width: 150px;
@@ -220,7 +221,6 @@ body {
 .contact__icon {
   width: 60px;
   background: #999;
-  border-radius: 5px;
 }
 
 .logo {
@@ -235,6 +235,10 @@ body {
 .logo img {
   width: 130px;
   border-radius: 6px;
+  opacity: 0.8;
+}
+.logo img:hover {
+  opacity: 1;
 }
 
 .footer {
@@ -251,4 +255,7 @@ body {
   font-style: italic;
   opacity: 0.5;
   text-align: center;
+}
+.gmail {
+  background-color: #384148;
 }
