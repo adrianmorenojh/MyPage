@@ -16,10 +16,29 @@
   </head>
   <body>
     <header class="header">
-      <img class="header__logo" src="./images/logos-gifs/logo.png" alt="icon" />
+      <div class="burger-button" id='burger'>
+        <img src="./images/logos-gifs/menu.svg" alt="">
+      </div>
+      <nav class="menu" id='menu'>
+        <ol>
+            <li  >
+                <a id="portafolio" href="#briefcase"class="link" >Portafolio</a>
+            </li>
+           
+            <li >
+              <a id="sobre_mi" href="#aboutMe" class="link" >Sobre mi  </a>
+            </li>
+        
+            <li >
+                <a href="#contact" class="link"  id="contacto" ><button class="contact__button">contact</button> </a>
+            </li>
+        </ol>
+     </nav>
+
+      <a href="#"><img class="header__logo" src="./images/logos-gifs/logo.png" alt="icon" /></a>
       <div class="header__menu">
-        <a class="header__menu-anchor" href="">Sobre Mi</a>
-        <a class="header__menu-anchor" href="">Portafolio</a>
+        <a class="header__menu-anchor" href="#aboutMe">Sobre Mi</a>
+        <a class="header__menu-anchor" href="#briefcase">Portafolio</a>
         <a class="header__menu-anchor" href="#contact">
           <button class="contact__button">
             Contacto
@@ -50,6 +69,7 @@
         </div>
       </div>
     </div>
+    <a name="aboutMe">
     <h1 class="h1">Sobre Mi!</h1>
     <div class="sobreMi">
       <div class="sobreMi__info">
@@ -70,7 +90,7 @@
       </div>
       <div class="sobreMi__image">
         <img
-          src="./images/photo/image.jpg"
+          src="./images/image.jpg"
           alt=""
         />
       </div>
@@ -82,39 +102,63 @@
         </button>
       </a>
     </div>
+  </a>
+    <a name="briefcase">
     <div class="portafolio">
-      <h1 class="h1">Portafolio</h1>
+      <h1 class="h1" id="port">Portafolio</h1>
       <div class="portafolio__proyectos">
         <div class="proyecto">
-          <img src="./images/logos-gifs/loading.gif" id="image"alt="" />
+          <img class=proyecto__image src="./images/drink4.png" id="image"alt="" />
           <p>Pagina Web de un estudio de tatuajes. La pagina cuenta muestra el estudio por completo, desde el estudio, tatuadores, estilos de tatuajes, entre otros.<br>
             Fue desarrollada en React usando styled components.
           </p>
-          <a href="https://github.com/adrianmorenojh/DrInk"><button class="proyecto__button">Ver repositorio en GitHub</button></a>
+          <a class="proyecto__anchor" href="https://github.com/adrianmorenojh/Peliculas.">
+            <img class="contact__icon  url" src="./images/logos-gifs/vectorpaint (11).svg" alt="" />
+          </a>
+          <a class="proyecto__anchor" href="https://github.com/adrianmorenojh/Peliculas.">
+            <img class="contact__icon" src="./images/logos-gifs/vectorpaint (10).svg" alt="" />
+          </a>
         </div>
         <div class="proyecto">
-          <img src="./images/logos-gifs/loading.gif" id="imagePelis" alt="" />
+          <img class=proyecto__image src="./images/pelis1.png" id="imagePelis" alt="" />
           <p>Aplicacion web de Peliculas(sencilla). La aplicacion cuenta con varias secciones en las que tenemos los generos, tambien cuenta con un buscador y un modal que nos da info de la pelicula que queramos.
             <br> La aplicacion fue diseñada con html, javascript vanilla y css.
           </p>
-          <a href="https://github.com/adrianmorenojh/Peliculas."><button class="proyecto__button">Ver repositorio en GitHub</button></a>
+          <a class="proyecto__anchor" href="https://github.com/adrianmorenojh/Peliculas.">
+            <img class="contact__icon  url" src="./images/logos-gifs/vectorpaint (11).svg" alt="" />
+          </a>
+          <a class="proyecto__anchor" href="https://github.com/adrianmorenojh/Peliculas.">
+            <img class="contact__icon" src="./images/logos-gifs/vectorpaint (10).svg" alt="" />
+          </a>
         </div>
         <div class="proyecto">
-          <img src="./images/compuaire/compuaire.png" alt="" />
+          <img class=proyecto__image src="./images/compuaire.png" alt="" />
           <p>Pagina web de empresa de aires acondicionados(en proceso).La pagina se enfoca en mostrar todo el trabajo de la empresa, desde obras pequeñas hasta obras grandes en diferentes ubicaciones<br> esta siendo desarrollada con javascript html y css.</p>
-          <a href="https://github.com/adrianmorenojh/CompuAire"><button class="proyecto__button">Ver repositorio en GitHub</button></a>
+          <a class="proyecto__anchor" href="https://github.com/adrianmorenojh/Peliculas.">
+            <img class="contact__icon  url" src="./images/logos-gifs/vectorpaint (11).svg" alt="" />
+          </a>
+          <a class="proyecto__anchor" href="https://github.com/adrianmorenojh/Peliculas.">
+            <img class="contact__icon" src="./images/logos-gifs/vectorpaint (10).svg" alt="" />
+          </a>
         </div>
         <div class="proyecto">
-          <video class="video" src="./images/playMovies/20200425_173138.mp4" controls alt="" ></video>
+          <img class=proyecto__image src="https://imagenes.universia.net/gc/net/images/cultura/d/di/dia/dia-mundial-de-la-vida-silvestre.jpg"  alt="" />
           <p>Single Page App responsive de peliculas. es un proyecto que cuenta con varias secciones, cuenta con una vista principal donde vemos los generos, un burger menu para ver un genero en especifico o realizar alguna busqueda, cuenta con un registro de usuario, con detalles de la pelicula, peliculas recomendadas, entre otros.<br>
           aplicacion desarrollada con diseño responsive en react js con ayuda de una api rest gratuita, se uso styled components para los estilos </p>
-          <a href="https://github.com/adrianmorenojh/playmovies.github.io"><button class="proyecto__button">Ver repositorio en GitHub</button></a>
+          <a class="proyecto__anchor" href="https://github.com/adrianmorenojh/Peliculas.">
+            <img class="contact__icon  url" src="./images/logos-gifs/vectorpaint (11).svg" alt="" />
+          </a>
+          <a class="proyecto__anchor" href="https://github.com/adrianmorenojh/Peliculas.">
+            <img class="contact__icon" src="./images/logos-gifs/vectorpaint (10).svg" alt="" />
+          </a>
         </div>
       </div>
     </div>
+  </a>
     <div class="contact">
-      <a name="contact">
+<a name="contact">  
       <h1 class="contact__h1">Contacto</h1>
+      <div class="icons">
         <a class="anchor" href="https://www.facebook.com/jeimmy.a.moreno">
           <img class="contact__icon" src="./images/logos-gifs/facebook.svg" alt="" />
         </a>
@@ -136,11 +180,55 @@
         <a class="logo" href="/">
           <img  src="./images/logo.png" alt="" />
         </a>
-
+      </div>
+    </a>
     </div>
     <footer class="footer">
       <p>Codificado a mano por <span class="span">Adrian Moreno</span>, usando <span class="span">Html5</span> y <span class="span">Css3.</span></p>
     </footer>
-    <script src="./JavasCript/index.js"></script>
+    <script >
+      const portafolio = document.getElementById('portafolio');
+      const sobreMi = document.getElementById('sobre_mi');
+      const contact = document.getElementById('contacto');
+  
+      const menu = document.getElementById('menu');
+      const burger = document.getElementById('burger');
+
+        portafolio.addEventListener('click', function(){
+        if(menu.classList.contains('is-active')){
+          menu.classList.remove('is-active');
+        }else{
+          menu.classList.add('is-active');
+        }
+        } );
+        
+        sobreMi.addEventListener('click', function(){
+        if(menu.classList.contains('is-active')){
+          menu.classList.remove('is-active');
+        }else{
+          menu.classList.add('is-active');
+        }
+        } );
+        
+        contact.addEventListener('click', function(){
+        if(menu.classList.contains('is-active')){
+          menu.classList.remove('is-active');
+        }else{
+          menu.classList.add('is-active');
+        }
+        } );
+
+        burger.addEventListener('click', function(){
+        if(menu.classList.contains('is-active')){
+          menu.classList.remove('is-active');
+        }else{
+          menu.classList.add('is-active');
+        }
+        } );
+
+
+
+        
+    </script>
   </body>
 </html>

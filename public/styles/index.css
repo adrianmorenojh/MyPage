@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  padding-top: 65px;
   margin: 0;
   color: #384148;
   font-family: "Merriweather Sans", sans-serif;
@@ -15,11 +16,10 @@ body {
   font-size: 22px;
   color: white;
   border: none;
-  opacity: 0.8;
   font-family: "Bebas Neue", sans-serif;
 }
 .contact__button:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 .h1 {
   font-weight: 900;
@@ -29,6 +29,8 @@ body {
   text-align: center;
 }
 .header {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 60px;
   background-color: white;
@@ -73,7 +75,7 @@ body {
 .hero {
   padding-top: 20px;
   width: 75%;
-  font-size: 1.1em;
+  font-size: 1em;
   margin-bottom: 30px;
 }
 
@@ -105,7 +107,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   width: 100vw;
-  margin: 25px 0 0;
   /* background-color: #384148; */
 }
 .sobreMi__image {
@@ -137,7 +138,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin: 30px 0 35px;
 }
 .span {
   color: black;
@@ -147,7 +148,6 @@ body {
 .portafolio {
   background-color: white;
   width: 100vw;
-  margin-top: 50px;
   padding-top: 25px;
   border-top: 1px solid #666;
 }
@@ -162,7 +162,7 @@ body {
 }
 .proyecto {
   max-width: 500px;
-  margin: 30px 35px;
+  margin: 20px 35px;
   border-radius: 15px;
   background-color: #f1f3f4;
   text-align: center;
@@ -172,13 +172,12 @@ body {
   font-weight: 600;
   font-style: italic;
   color: #666;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-.proyecto img {
-  width: 100%;
-  height: 400px;
-  border-radius: 15px;
-}
-.video {
+.proyecto__image {
   width: 100%;
   height: 400px;
   border-radius: 15px;
@@ -188,30 +187,36 @@ body {
   max-height: 70px;
   overflow: auto;
 }
-.proyecto__button {
-  margin: 10px;
-  height: 2.5em;
-  border: none;
-  border-radius: 10px;
-  background-color: #384148;
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
-  opacity: 0.9;
-  cursor: pointer;
-}
-.proyecto__button:hover {
-  opacity: 1;
-}
-.contact {
+.proyecto__anchor {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px 10px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.proyecto__anchor:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+.url {
+  background-color: #f1f3f4 !important;
+  width: 45px !important;
+}
+
+.contact {
+  margin-top: 20px;
+  display: block;
   flex-wrap: wrap;
-  padding: 45px 0;
+  padding-top: 45px;
   background-color: #384148;
-  position: relative;
   min-height: 200px;
+}
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .anchor {
   height: 80px;
@@ -226,21 +231,18 @@ body {
   background: rgba(0, 0, 0, 0.4);
 }
 .contact__icon {
-  width: 60px;
+  width: 50px;
   background: #999;
   cursor: pointer;
 }
 .contact__h1 {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  right: 0;
   color: white;
   text-align: center;
   opacity: 0.7;
   font-weight: 700;
   font-style: initial;
   font-size: 2.5em;
+  margin: 0;
 }
 
 .logo {
@@ -264,9 +266,8 @@ body {
 .footer {
   box-sizing: border-box;
   width: 100%;
-  height: 100px;
+  height: 60px;
   background-color: #384148;
-  padding: 50px 0;
 }
 .footer p {
   margin: 0;
@@ -278,4 +279,74 @@ body {
 }
 .gmail {
   background-color: #384148;
+}
+
+.menu {
+  position: fixed;
+  background: rgba(241, 243, 244, 0.9);
+  z-index: 3;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -100vw;
+  transition: 0.3s;
+}
+.menu.is-active {
+  right: 0;
+}
+
+.menu ol {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.burger-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: none;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  right: 15px;
+  top: 8px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  /* font-size:50px; */
+}
+.link {
+  font-size: 2em;
+  text-decoration: none;
+  color: #384148;
+}
+.burger-button img {
+  width: 35px;
+}
+
+@media (max-width: 380px) {
+  .hero {
+    width: 100%;
+  }
+  .hero__image {
+    height: 250px;
+  }
+  .sobreMi__info {
+    padding: 0px 10px;
+  }
+  .proyecto {
+    margin: 20px 0;
+  }
+  .burger-button {
+    display: flex;
+  }
+  .header__menu {
+    display: none;
+  }
 }
