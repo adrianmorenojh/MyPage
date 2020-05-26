@@ -330,7 +330,7 @@ body {
   width: 35px;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
   .hero {
     width: 100%;
   }
