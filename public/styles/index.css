@@ -47,6 +47,7 @@ body {
 .header__logo {
   width: 145px;
   height: 60px;
+  margin: 8px 0 0 0;
 }
 
 .header__menu {
@@ -114,7 +115,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 350px;
+  min-width: 768px;
 }
 .sobreMi__image img {
   width: 350px;
@@ -124,7 +125,7 @@ body {
 }
 
 .sobreMi__info {
-  min-width: 350px;
+  min-width: 768px;
   width: 50%;
   padding: 20px 100px;
   box-sizing: border-box;
@@ -270,7 +271,7 @@ body {
   background-color: #384148;
 }
 .footer p {
-  margin: 0;
+  margin: -1px;
   color: white;
   font-weight: 500;
   font-style: italic;
@@ -329,16 +330,22 @@ body {
 .burger-button img {
   width: 35px;
 }
-
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .hero {
     width: 100%;
   }
+}
+
+@media (max-width: 450px) {
   .hero__image {
     height: 250px;
   }
   .sobreMi__info {
     padding: 0px 10px;
+    min-width: 360px;
+  }
+  .sobreMi__image {
+    min-width: 360px;
   }
   .proyecto {
     margin: 20px 0;
