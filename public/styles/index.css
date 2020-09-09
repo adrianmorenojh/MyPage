@@ -340,6 +340,9 @@ body {
   .hero__image {
     height: 250px;
   }
+  .hero__info-parrafo{
+    margin: 15px 5px;
+  }
   .sobreMi__info {
     padding: 0px 10px;
     min-width: 360px;
