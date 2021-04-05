@@ -20,80 +20,86 @@
     <link rel="stylesheet" href="./styles/index.css" />
     <title>Adrian Moreno</title>
   </head>
-  <body id>
-    <section class="home">
-      <div class="hero">
-        <div class="menu menu--closed" id="menu">
-          <div class="button" id="button">
-            <span> </span>
-            <span> </span>
-            <span> </span>
-          </div>
+  <body>
+    <section class="spinner-container" id="spinner">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </section>
+    <div class="menu menu--closed" id="menu">
+      <div class="button" id="button">
+        <span> </span>
+        <span> </span>
+        <span> </span>
+      </div>
 
-          <div class="tools tools--hidden" id="tools">
-            <a href="#">
-              <div id="tools" class="tools-anchor">
-                <i class="fas fa-home"></i>
-                <p id="anchor">Home</p>
-              </div>
-            </a>
-            <a href="#">
-              <div id="tools" class="tools-anchor">
-                <i class="fas fa-user"></i>
-                <p id="anchor">About</p>
-              </div>
-            </a>
-            <a href="#">
-              <div id="tools" class="tools-anchor">
-                <i class="fas fa-briefcase"></i>
-                <p id="anchor">Portfolio</p>
-              </div>
-            </a>
-            <a href="#">
-              <div id="tools" class="tools-anchor">
-                <i class="fas fa-comments"></i>
-                <p id="anchor">Contact</p>
-              </div>
-            </a>
+      <div class="tools tools--hidden" id="tools">
+        <a href="#" id="anchor">
+          <div id="home-anchor" class="tools-anchor">
+            <i class="fas fa-home"></i>
+            <p id="p">Home</p>
           </div>
-        </div>
+        </a>
+        <a href="#">
+          <div id="about-anchor" class="tools-anchor">
+            <i class="fas fa-user"></i>
+            <p id="p">About</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="briefcase-anchor" class="tools-anchor">
+            <i class="fas fa-briefcase"></i>
+            <p id="p">Portfolio</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="contact-anchor" class="tools-anchor">
+            <i class="fas fa-comments"></i>
+            <p id="p">Contact</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <section class="home active fade-in" id="home">
+      <div class="hero">
         <div class="hero__info">
-          <h1>Adrian Moreno</h1>
-          <h2>Desarollador web Frontend</h2>
+          <h1>Adrian <span>Moreno</span></h1>
+          <h2>Desarrollador web Frontend</h2>
           <div class="social__hero">
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTM3MC41OTM3NSAxNjkuMzA0Njg4Yy0yLjM1NTQ2OS02LjM4MjgxMy02LjExMzI4MS0xMi4xNjAxNTctMTAuOTk2MDk0LTE2LjkwMjM0NC00Ljc0MjE4Ny00Ljg4MjgxMy0xMC41MTU2MjUtOC42NDA2MjUtMTYuOTAyMzQ0LTEwLjk5NjA5NC01LjE3OTY4Ny0yLjAxMTcxOS0xMi45NjA5MzctNC40MDYyNS0yNy4yOTI5NjgtNS4wNTg1OTQtMTUuNTAzOTA2LS43MDcwMzEtMjAuMTUyMzQ0LS44NTkzNzUtNTkuNDAyMzQ0LS44NTkzNzUtMzkuMjUzOTA2IDAtNDMuOTAyMzQ0LjE0ODQzOC01OS40MDIzNDQuODU1NDY5LTE0LjMzMjAzMS42NTYyNS0yMi4xMTcxODcgMy4wNTA3ODEtMjcuMjkyOTY4IDUuMDYyNS02LjM4NjcxOSAyLjM1NTQ2OS0xMi4xNjQwNjMgNi4xMTMyODEtMTYuOTAyMzQ0IDEwLjk5NjA5NC00Ljg4MjgxMyA0Ljc0MjE4Ny04LjY0MDYyNSAxMC41MTU2MjUtMTEgMTYuOTAyMzQ0LTIuMDExNzE5IDUuMTc5Njg3LTQuNDA2MjUgMTIuOTY0ODQzLTUuMDU4NTk0IDI3LjI5Njg3NC0uNzA3MDMxIDE1LjUtLjg1OTM3NSAyMC4xNDg0MzgtLjg1OTM3NSA1OS40MDIzNDQgMCAzOS4yNS4xNTIzNDQgNDMuODk4NDM4Ljg1OTM3NSA1OS40MDIzNDQuNjUyMzQ0IDE0LjMzMjAzMSAzLjA0Njg3NSAyMi4xMTMyODEgNS4wNTg1OTQgMjcuMjkyOTY5IDIuMzU5Mzc1IDYuMzg2NzE5IDYuMTEzMjgxIDEyLjE2MDE1NiAxMC45OTYwOTQgMTYuOTAyMzQzIDQuNzQyMTg3IDQuODgyODEzIDEwLjUxNTYyNCA4LjY0MDYyNiAxNi45MDIzNDMgMTAuOTk2MDk0IDUuMTc5Njg4IDIuMDE1NjI1IDEyLjk2NDg0NCA0LjQxMDE1NiAyNy4yOTY4NzUgNS4wNjI1IDE1LjUuNzA3MDMyIDIwLjE0NDUzMi44NTU0NjkgNTkuMzk4NDM4Ljg1NTQ2OSAzOS4yNTc4MTIgMCA0My45MDYyNS0uMTQ4NDM3IDU5LjQwMjM0NC0uODU1NDY5IDE0LjMzMjAzMS0uNjUyMzQ0IDIyLjExNzE4Ny0zLjA0Njg3NSAyNy4yOTY4NzQtNS4wNjI1IDEyLjgyMDMxMy00Ljk0NTMxMiAyMi45NTMxMjYtMTUuMDc4MTI1IDI3Ljg5ODQzOC0yNy44OTg0MzcgMi4wMTE3MTktNS4xNzk2ODggNC40MDYyNS0xMi45NjA5MzggNS4wNjI1LTI3LjI5Mjk2OS43MDcwMzEtMTUuNTAzOTA2Ljg1NTQ2OS0yMC4xNTIzNDQuODU1NDY5LTU5LjQwMjM0NCAwLTM5LjI1MzkwNi0uMTQ4NDM4LTQzLjkwMjM0NC0uODU1NDY5LTU5LjQwMjM0NC0uNjUyMzQ0LTE0LjMzMjAzMS0zLjA0Njg3NS0yMi4xMTcxODctNS4wNjI1LTI3LjI5Njg3NHptLTExNC41OTM3NSAxNjIuMTc5Njg3Yy00MS42OTE0MDYgMC03NS40ODgyODEtMzMuNzkyOTY5LTc1LjQ4ODI4MS03NS40ODQzNzVzMzMuNzk2ODc1LTc1LjQ4NDM3NSA3NS40ODgyODEtNzUuNDg0Mzc1YzQxLjY4NzUgMCA3NS40ODQzNzUgMzMuNzkyOTY5IDc1LjQ4NDM3NSA3NS40ODQzNzVzLTMzLjc5Njg3NSA3NS40ODQzNzUtNzUuNDg0Mzc1IDc1LjQ4NDM3NXptNzguNDY4NzUtMTM2LjMxMjVjLTkuNzQyMTg4IDAtMTcuNjQwNjI1LTcuODk4NDM3LTE3LjY0MDYyNS0xNy42NDA2MjVzNy44OTg0MzctMTcuNjQwNjI1IDE3LjY0MDYyNS0xNy42NDA2MjUgMTcuNjQwNjI1IDcuODk4NDM3IDE3LjY0MDYyNSAxNy42NDA2MjVjLS4wMDM5MDYgOS43NDIxODgtNy44OTg0MzcgMTcuNjQwNjI1LTE3LjY0MDYyNSAxNy42NDA2MjV6bTAgMCIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTMwNSAyNTZjMCAyNy4wNjI1LTIxLjkzNzUgNDktNDkgNDlzLTQ5LTIxLjkzNzUtNDktNDkgMjEuOTM3NS00OSA0OS00OSA0OSAyMS45Mzc1IDQ5IDQ5em0wIDAiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im00NzUuMDc0MjE5IDBoLTQzOC4xNDg0MzhjLTIwLjM5NDUzMSAwLTM2LjkyNTc4MSAxNi41MzEyNS0zNi45MjU3ODEgMzYuOTI1NzgxdjQzOC4xNDg0MzhjMCAyMC4zOTQ1MzEgMTYuNTMxMjUgMzYuOTI1NzgxIDM2LjkyNTc4MSAzNi45MjU3ODFoNDM4LjE0ODQzOGMyMC4zOTQ1MzEgMCAzNi45MjU3ODEtMTYuNTMxMjUgMzYuOTI1NzgxLTM2LjkyNTc4MXYtNDM4LjE0ODQzOGMwLTIwLjM5NDUzMS0xNi41MzEyNS0zNi45MjU3ODEtMzYuOTI1NzgxLTM2LjkyNTc4MXptLTcyLjk2MDkzOCAzMTYuNjA1NDY5Yy0uNzEwOTM3IDE1LjY0ODQzNy0zLjE5OTIxOSAyNi4zMzIwMzEtNi44MzIwMzEgMzUuNjgzNTkzLTcuNjM2NzE5IDE5Ljc0NjA5NC0yMy4yNDYwOTQgMzUuMzU1NDY5LTQyLjk5MjE4OCA0Mi45OTIxODgtOS4zNDc2NTYgMy42MzI4MTItMjAuMDM1MTU2IDYuMTE3MTg4LTM1LjY3OTY4NyA2LjgzMjAzMS0xNS42NzU3ODEuNzE0ODQ0LTIwLjY4MzU5NC44ODY3MTktNjAuNjA1NDY5Ljg4NjcxOS0zOS45MjU3ODEgMC00NC45Mjk2ODctLjE3MTg3NS02MC42MDkzNzUtLjg4NjcxOS0xNS42NDQ1MzEtLjcxNDg0My0yNi4zMzIwMzEtMy4xOTkyMTktMzUuNjc5Njg3LTYuODMyMDMxLTkuODEyNS0zLjY5MTQwNi0xOC42OTUzMTMtOS40NzY1NjItMjYuMDM5MDYzLTE2Ljk1NzAzMS03LjQ3NjU2Mi03LjMzOTg0NC0xMy4yNjE3MTktMTYuMjI2NTYzLTE2Ljk1MzEyNS0yNi4wMzUxNTctMy42MzI4MTItOS4zNDc2NTYtNi4xMjEwOTQtMjAuMDM1MTU2LTYuODMyMDMxLTM1LjY3OTY4Ny0uNzIyNjU2LTE1LjY3OTY4Ny0uODkwNjI1LTIwLjY4NzUtLjg5MDYyNS02MC42MDkzNzVzLjE2Nzk2OS00NC45Mjk2ODguODg2NzE5LTYwLjYwNTQ2OWMuNzEwOTM3LTE1LjY0ODQzNyAzLjE5NTMxMi0yNi4zMzIwMzEgNi44MjgxMjUtMzUuNjgzNTkzIDMuNjkxNDA2LTkuODA4NTk0IDkuNDgwNDY4LTE4LjY5NTMxMyAxNi45NjA5MzctMjYuMDM1MTU3IDcuMzM5ODQ0LTcuNDgwNDY5IDE2LjIyNjU2My0xMy4yNjU2MjUgMjYuMDM1MTU3LTE2Ljk1NzAzMSA5LjM1MTU2Mi0zLjYzMjgxMiAyMC4wMzUxNTYtNi4xMTcxODggMzUuNjgzNTkzLTYuODMyMDMxIDE1LjY3NTc4MS0uNzE0ODQ0IDIwLjY4MzU5NC0uODg2NzE5IDYwLjYwNTQ2OS0uODg2NzE5czQ0LjkyOTY4OC4xNzE4NzUgNjAuNjA1NDY5Ljg5MDYyNWMxNS42NDg0MzcuNzEwOTM3IDI2LjMzMjAzMSAzLjE5NTMxMyAzNS42ODM1OTMgNi44MjQyMTkgOS44MDg1OTQgMy42OTE0MDYgMTguNjk1MzEzIDkuNDgwNDY4IDI2LjAzOTA2MyAxNi45NjA5MzcgNy40NzY1NjMgNy4zNDM3NSAxMy4yNjU2MjUgMTYuMjI2NTYzIDE2Ljk1MzEyNSAyNi4wMzUxNTcgMy42MzY3MTkgOS4zNTE1NjIgNi4xMjEwOTQgMjAuMDM1MTU2IDYuODM1OTM4IDM1LjY4MzU5My43MTQ4NDMgMTUuNjc1NzgxLjg4MjgxMiAyMC42ODM1OTQuODgyODEyIDYwLjYwNTQ2OXMtLjE2Nzk2OSA0NC45Mjk2ODgtLjg4NjcxOSA2MC42MDU0Njl6bTAgMCIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L3N2Zz4="
-            />
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTQ3NS4wNzQyMTkgMGgtNDM4LjE0ODQzOGMtMjAuMzk0NTMxIDAtMzYuOTI1NzgxIDE2LjUzMTI1LTM2LjkyNTc4MSAzNi45MjU3ODF2NDM4LjE0ODQzOGMwIDIwLjM5NDUzMSAxNi41MzEyNSAzNi45MjU3ODEgMzYuOTI1NzgxIDM2LjkyNTc4MWg0MzguMTQ4NDM4YzIwLjM5NDUzMSAwIDM2LjkyNTc4MS0xNi41MzEyNSAzNi45MjU3ODEtMzYuOTI1Nzgxdi00MzguMTQ4NDM4YzAtMjAuMzk0NTMxLTE2LjUzMTI1LTM2LjkyNTc4MS0zNi45MjU3ODEtMzYuOTI1Nzgxem0tMjkzLjQ2NDg0NCAzODdoLTYyLjM0NzY1NnYtMTg3LjU3NDIxOWg2Mi4zNDc2NTZ6bS0zMS4xNzE4NzUtMjEzLjE4NzVoLS40MDYyNWMtMjAuOTIxODc1IDAtMzQuNDUzMTI1LTE0LjQwMjM0NC0zNC40NTMxMjUtMzIuNDAyMzQ0IDAtMTguNDA2MjUgMTMuOTQ1MzEzLTMyLjQxMDE1NiAzNS4yNzM0MzctMzIuNDEwMTU2IDIxLjMyODEyNiAwIDM0LjQ1MzEyNiAxNC4wMDM5MDYgMzQuODU5Mzc2IDMyLjQxMDE1NiAwIDE4LTEzLjUzMTI1IDMyLjQwMjM0NC0zNS4yNzM0MzggMzIuNDAyMzQ0em0yNTUuOTg0Mzc1IDIxMy4xODc1aC02Mi4zMzk4NDR2LTEwMC4zNDc2NTZjMC0yNS4yMTg3NS05LjAyNzM0My00Mi40MTc5NjktMzEuNTg1OTM3LTQyLjQxNzk2OS0xNy4yMjI2NTYgMC0yNy40ODA0NjkgMTEuNjAxNTYzLTMxLjk4ODI4MiAyMi44MDA3ODEtMS42NDg0MzcgNC4wMDc4MTMtMi4wNTA3ODEgOS42MDkzNzUtMi4wNTA3ODEgMTUuMjE0ODQ0djEwNC43NWgtNjIuMzQzNzVzLjgxNjQwNy0xNjkuOTc2NTYyIDAtMTg3LjU3NDIxOWg2Mi4zNDM3NXYyNi41NTg1OTRjOC4yODUxNTctMTIuNzgxMjUgMjMuMTA5Mzc1LTMwLjk2MDkzNyA1Ni4xODc1LTMwLjk2MDkzNyA0MS4wMTk1MzEgMCA3MS43NzczNDQgMjYuODA4NTkzIDcxLjc3NzM0NCA4NC40MjE4NzR6bTAgMCIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L3N2Zz4="
-            />
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTQ3NS4wNzQyMTkgMGgtNDM4LjE0ODQzOGMtMjAuMzk0NTMxIDAtMzYuOTI1NzgxIDE2LjUzMTI1LTM2LjkyNTc4MSAzNi45MjU3ODF2NDM4LjE0ODQzOGMwIDIwLjM5NDUzMSAxNi41MzEyNSAzNi45MjU3ODEgMzYuOTI1NzgxIDM2LjkyNTc4MWgyMzYuNTc0MjE5di0xOThoLTY2LjV2LTc3LjVoNjYuNXYtNTcuMDM1MTU2YzAtNjYuMTQwNjI1IDQwLjM3ODkwNi0xMDIuMTQwNjI1IDk5LjM3ODkwNi0xMDIuMTQwNjI1IDI4LjI1NzgxMyAwIDUyLjU0Mjk2OSAyLjEwNTQ2OSA1OS42MjEwOTQgMy4wNDY4NzV2NjkuMTI4OTA2aC00MC42ODM1OTRjLTMyLjEwMTU2MiAwLTM4LjMxNjQwNiAxNS4yNTM5MDYtMzguMzE2NDA2IDM3LjY0MDYyNXY0OS4zNTkzNzVoNzYuNzVsLTEwIDc3LjVoLTY2Ljc1djE5OGgxMjEuNTc0MjE5YzIwLjM5NDUzMSAwIDM2LjkyNTc4MS0xNi41MzEyNSAzNi45MjU3ODEtMzYuOTI1Nzgxdi00MzguMTQ4NDM4YzAtMjAuMzk0NTMxLTE2LjUzMTI1LTM2LjkyNTc4MS0zNi45MjU3ODEtMzYuOTI1Nzgxem0wIDAiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9zdmc+"
-            />
+            <a href="https://www.instagram.com/adrianmorenojh_/">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/adrianmorenojh">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/adrian-moreno-4087a21a8/">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="about-container active">
+    <section class="about-container" id="about">
       <div class="about">
+        <h1>Acerca de mi</h1>
         <div class="aboutImg-container">
-          <div class="overlay"></div>
           <img
             class="aboutImg"
-            src="https://fp.uoc.fje.edu/wp-content/uploads/2018/07/que-es-un-full-stack-developer-e1546946168122.jpg"
+            src="./images/adrianImage.png"
             alt="fotografia desarrollador"
           />
         </div>
         <div class="aboutMe">
-          <h1>About Me</h1>
+          <h2>Hola!</h2>
           <p>
-            Mi nombre es <span class="span">Adrian Moreno</span>, programador
-            frontend amante del mundo digital y el desarrollo web. Me gusta
-            codificar en HTML, Css, JavasCript y ReactJS.<br /><br />
-            Hola! mi nombre es <span class="span">Adrian Moreno</span>, soy
-            desarrollador web Frontend amante del mundo digital y la
-            programacion. Me apasiona el desarrollo y diseño web, mi objetivo es
+            Mi nombre es <span class="span">Adrian Moreno</span>, soy
+            desarrollador web Frontend amante del mundo digital y el desarrollo
+            web. Me apasiona el aprender cosas nuevas cada dia, mi objetivo es
             ayudar a que tu negocio, producto o empresa logre sus objetivos
             mediante la creacion de paginas y aplicaciones web. Algunos de los
             lenguajes y herramientas con las que trabajo son Html5, css3,
@@ -107,131 +113,196 @@
       </div>
     </section>
 
-    <a name="briefcase">
-      <section class="portafolio">
-        <h1 class="h1" id="port">Portafolio</h1>
-        <div class="portafolio__proyectos">
-          <div class="proyecto">
-            <div class="proyecto-overlay"></div>
-            <img
-              class="proyecto__image"
-              src="./images/drink4.png"
-              id="image"
-              alt=""
-            />
-            <div class="proyecto-details fadeIn-bottom">
-              <h3>This is a title</h3>
-              <p>This is a short description</p>
-            </div>
-          </div>
-          <div class="proyecto">
-            <div class="proyecto-overlay"></div>
-            <img
-              class="proyecto__image"
-              src="./images/Sin título.png"
-              id="image"
-              alt=""
-            />
-
-            <div class="proyecto-details fadeIn-bottom">
-              <h3>This is a title</h3>
-              <p>This is a short description</p>
-            </div>
-          </div>
-          <div class="proyecto">
-            <div class="proyecto-overlay"></div>
-            <img
-              class="proyecto__image"
-              src="./images/compuaire.png"
-              id="image"
-              alt=""
-            />
-            <div class="proyecto-details fadeIn-bottom">
-              <h3>This is a title</h3>
-              <p>This is a short description</p>
-            </div>
-          </div>
-          <div class="proyecto">
-            <div class="proyecto-overlay"></div>
-            <img
-              class="proyecto__image"
-              src="./images/pelis1.png"
-              id="image"
-              alt=""
-            />
-            <div class="proyecto-details fadeIn-bottom">
-              <h3>This is a title</h3>
-              <p>This is a short description</p>
+    <section class="portafolio" id="briefcase">
+      <h1 class="h1" id="port">Portafolio</h1>
+      <div class="portafolio__proyectos">
+        <div class="proyecto">
+          <div class="proyecto-overlay"></div>
+          <img
+            class="proyecto__image"
+            src="./images/drink.png"
+            id="image"
+            alt="pagina de estudio de tatuajes"
+          />
+          <div class="proyecto-details fadeIn-bottom">
+            <h3>Dr. Ink!</h3>
+            <p>
+              Pagina web de estudio de tatuajes. Cuenta con un home, una seccion
+              donde puedes ver diferentes tipos de tatuajes, seccion donde se
+              puede ver las imagenes del estudio, informacion de los tatuadores
+              y la seccion de contacto. <br />
+              <strong>desarrollada en React.</strong>
+            </p>
+            <div class="proyecto-iconos">
+              <a href="https://github.com/adrianmorenojh/DrInk"
+                ><i class="fab fa-github proyect-icon"></i
+              ></a>
+              <a href="https://dr-ink.vercel.app/"
+                ><i class="fab fa-chrome proyect-icon"></i
+              ></a>
             </div>
           </div>
         </div>
-      </section>
-    </a>
-    <a name="contact">
-      <section class="contact-container">
-        <h1 class="contact-h1">Ponerse en contacto</h1>
-        <div class="contact">
-          <div class="contact-info">
-            <h2>Contacto</h2>
+        <div class="proyecto">
+          <div class="proyecto-overlay"></div>
+          <img
+            class="proyecto__image"
+            src="./images/compuaire.png"
+            id="image"
+            alt="pagina de empresa de aires acondicionados"
+          />
+
+          <div class="proyecto-details fadeIn-bottom">
+            <h3>CompuAire</h3>
             <p>
-              Si tienes alguna sugerencia, proyecto o incluso quieres saludar
-              ... por favor llena el siguiente formulario y te responderé a la
-              brevedad.
+              Pagina web de empresa dedicada al aire acondicionado. Cuenta con
+              un home, seccion de servicios ofrecidos, seccion para dar a
+              conocer la empresa, productos a la venta, imagenes de obras
+              realizadas, entre otros..<br />
+              <strong>Desarrollada con JavasCript</strong>
             </p>
-            <p>
-              <i class="fas fa-map-marker-alt"></i>
-              <b>Direccion:</b> Itagui-Antioquia.
-            </p>
-            <p>
-              <i class="fas fa-envelope"></i>
-              <b>Correo electronico:</b> morenoadrianh1.2@gmail.com.
-            </p>
-            <h3>Perfiles sociales:</h3>
-            <div class="contact-icons">
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-linkedin-in"></i>
-              <i class="fab fa-github"></i>
+            <div class="proyecto-iconos">
+              <a href="https://github.com/adrianmorenojh/Compuaire"
+                ><i class="fab fa-github proyect-icon"></i
+              ></a>
+              <a href="https://compuaire.vercel.app/"
+                ><i class="fab fa-chrome proyect-icon"></i
+              ></a>
             </div>
           </div>
-          <div class="contact-message">
+        </div>
+        <div class="proyecto">
+          <div class="proyecto-overlay"></div>
+          <img
+            class="proyecto__image"
+            src="./images/photographs.png"
+            id="image"
+            alt="galeria de imagenes"
+          />
+          <div class="proyecto-details fadeIn-bottom">
+            <h3>Photographs</h3>
+            <p>
+              Aplicacion donde puedes buscar cualquier tipo de imagenes. la
+              aplicacion cuenta con un buscador, modo nocturno, tiene infinity
+              scroll para mayor cantidad de resultados, cuenta con un menu de
+              categorias para facilitar la busqueda de tus imagenes.<br /><strong
+                >desarrollada con React y los datos se obtuvieron consumiendo
+                una api publica con graphql.
+              </strong>
+            </p>
+            <div class="proyecto-iconos">
+              <a href="https://github.com/adrianmorenojh/photographs"
+                ><i class="fab fa-github proyect-icon"></i
+              ></a>
+              <a href="https://photographs.vercel.app/"
+                ><i class="fab fa-chrome proyect-icon"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="proyecto">
+          <div class="proyecto-overlay"></div>
+          <img
+            class="proyecto__image"
+            src="./images/playMovies.jpg"
+            id="image"
+            alt=""
+          />
+          <div class="proyecto-details fadeIn-bottom">
+            <h3>PelisPlay</h3>
+            <p>
+              Single Page App de peliculas. la aplicacion cuenta en su pagina
+              principal con las peliculas mas recientes y populares, cuenta con
+              un formulario de registro al que se debera acceder para guardar
+              peliculas en favoritos, cuenta con un menu de generos, un buscador
+              de peliculas entre otras funciones.<br />
+              <strong
+                >App desarrollada en React, peliculas obtenidas de la api
+                publica https://yts.mx/api
+              </strong>
+            </p>
+            <div class="proyecto-iconos">
+              <a href="https://github.com/adrianmorenojh/playMovies"
+                ><i class="fab fa-github-square proyect-icon"></i
+              ></a>
+              <a href="https://playmovies.vercel.app/"
+                ><i class="fab fa-chrome proyect-icon"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-container" id="contact">
+      <h1 class="contact-h1">Ponerse en contacto</h1>
+      <div class="contact">
+        <div class="contact-info">
+          <h2>Contacto</h2>
+          <p>
+            Si tienes alguna sugerencia, proyecto o incluso quieres saludar ...
+            por favor llena el siguiente formulario y te responderé a la
+            brevedad.
+          </p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            <b>Direccion:</b> Itagui-Antioquia.
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <b>Correo electronico:</b> morenoadrianh1.2@gmail.com.
+          </p>
+          <h3>Perfiles sociales:</h3>
+          <div class="contact-icons">
+            <a href="https://www.instagram.com/adrianmorenojh_/"
+              ><i class="fab fa-instagram fab-contact"></i
+            ></a>
+            <a href="https://github.com/adrianmorenojh">
+              <i class="fab fa-linkedin-in fab-contact"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/adrian-moreno-4087a21a8/">
+              <i class="fab fa-github fab-contact"></i>
+            </a>
+          </div>
+        </div>
+        <div class="contact-message">
+          <form method="POST" action="./pagina2.php">
             <div class="input-data">
-              <input type="text" name="name" id="" placeholder="Name" />
-              <input type="email" name="email" id="" placeholder="Email" />
+              <div class="input-container">
+                <input type="text" required id="contact-name" name="nombre" />
+                <label class="lbl-nombre">
+                  <span class="text-nomb">Nombre</span>
+                </label>
+              </div>
+              <div class="input-container">
+                <input type="text" required id="contact-email" name="email" />
+                <label class="lbl-nombre">
+                  <span class="text-nomb">Email</span>
+                </label>
+              </div>
             </div>
-            <input type="text" name="asunto" placeholder="Asunto" />
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="Tu mensaje"
-            ></textarea>
-          </div>
+            <div class="input-container">
+              <input type="text" required id="contact-asunto" name="asunto" />
+              <label class="lbl-nombre">
+                <span class="text-nomb">Asunto</span>
+              </label>
+            </div>
+            <div class="input-container textarea">
+              <textarea
+                name="mensaje"
+                id="mensaje"
+                cols="30"
+                rows="10"
+                required
+              ></textarea>
+              <label class="lbl-nombre">
+                <span class="text-nomb">tu mensaje</span>
+              </label>
+            </div>
+            <button type="submit" value="" class="submit">Enviar</button>
+          </form>
         </div>
-      </section>
-    </a>
-    <script>
-      const burgerMenu = document.getElementById("menu");
-      const tools = document.getElementById("tools");
-      const button = document.getElementById("button");
-
-      function toggle() {
-        if (burgerMenu.classList.contains("menu--open")) {
-          burgerMenu.classList.remove("menu--open");
-        } else {
-          burgerMenu.classList.add("menu--open");
-        }
-        if (tools.classList.contains("tools--visible")) {
-          tools.classList.remove("tools--visible");
-        } else {
-          tools.classList.add("tools--visible");
-        }
-      }
-
-      burgerMenu.onclick = function () {
-        toggle();
-        return false;
-      };
-    </script>
+      </div>
+    </section>
+    <script src="./js/index.js"></script>
   </body>
 </html>
