@@ -59,4 +59,4 @@ function load() {
   spinner.style.display = "none";
   /*   alert("evento load detectado!"); */
 }
-window.onload = load;
+setTimeout(load, 8000);
