@@ -55,8 +55,26 @@ contactAnchor.onclick = function () {
   contact.classList.add("active");
 };
 const spinner = document.getElementById("spinner");
+
 function load() {
   spinner.style.display = "none";
   /*   alert("evento load detectado!"); */
 }
-setTimeout(load, 8000);
+window.onload = load;
+/* setTimeout(load, 8000); */
+
+const $form = document.querySelector("#form");
+const $ButtonMailto = document.querySelector("#ButtonMailto");
+$form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = new FormData(this);
+  console.log(form.get("nombre"));
+  $ButtonMailto.setAttribute(
+    "href",
+    `mailto:morenoadrianh1.2@gmail.com?subject=Nombre:${form.get("nombre")} 
+    Email:${form.get("email")}&body=${form.get("mensaje")}`
+  );
+  $ButtonMailto.click();
+}
