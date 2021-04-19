@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: rgb(230, 230, 230);
   /* padding-top: 60px; */
   margin: 0;
   color: #384148;
@@ -13,6 +13,12 @@ body {
 }
 a {
   text-decoration: none;
+}
+.logo {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 8;
 }
 .spinner-container {
   width: 100vw;
@@ -299,7 +305,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: rgb(230, 230, 230);
   position: absolute;
   transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
   transition-timing-function: cubic-bezier(0.55, 0.085, 0, 0.99);
@@ -355,7 +361,7 @@ main {
 }
 .portafolio {
   overflow: scroll;
-  background-color: white;
+  background-color: rgb(230, 230, 230);
   width: 100vw;
   height: 100vh;
   padding-top: 10px;
@@ -763,6 +769,9 @@ main {
   }
 }
 @media (max-width: 470px) {
+  .logo {
+    display: none;
+  }
   .menu {
     margin: 5px 0 0 5px;
     width: 45px;
@@ -814,5 +823,13 @@ main {
   .aboutMe {
     width: 90%;
     padding: 0 0px 30px;
+  }
+  @media (max-width: 380px) {
+    .hero__info h1 {
+      font-size: 35px;
+    }
+    .hero__info h2 {
+      font-size: 22px;
+    }
   }
 }
