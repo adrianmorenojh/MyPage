@@ -19,6 +19,8 @@ burgerMenu.onclick = function () {
   toggle();
 };
 
+const logo = document.getElementById("logo");
+
 const home = document.getElementById("home");
 const homeAnchor = document.getElementById("home-anchor");
 const about = document.getElementById("about");
@@ -37,21 +39,25 @@ function removeTransition() {
 homeAnchor.onclick = function () {
   removeTransition();
   document.documentElement.style.setProperty("--menu-color", "white");
+  logo.setAttribute("src", "./images/logo_transparent.png");
   home.classList.add("active");
 };
 aboutAnchor.onclick = function () {
   removeTransition();
   document.documentElement.style.setProperty("--menu-color", "#555");
+  logo.setAttribute("src", "./images/logo_transparent_black.png");
   about.classList.add("active");
 };
 briefcaseAnchor.onclick = function () {
   removeTransition();
   document.documentElement.style.setProperty("--menu-color", "#555");
+  logo.setAttribute("src", "./images/logo_transparent_black.png");
   briefcase.classList.add("active");
 };
 contactAnchor.onclick = function () {
   removeTransition();
   document.documentElement.style.setProperty("--menu-color", "#555");
+  logo.setAttribute("src", "./images/logo_transparent_black.png");
   contact.classList.add("active");
 };
 const spinner = document.getElementById("spinner");
