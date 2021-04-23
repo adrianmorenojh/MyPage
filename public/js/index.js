@@ -70,17 +70,36 @@ window.onload = load;
 /* setTimeout(load, 8000); */
 
 const $form = document.querySelector("#form");
-const $ButtonMailto = document.querySelector("#ButtonMailto");
 $form.addEventListener("submit", handleSubmit);
+const $green = document.getElementById("response-green");
+const $red = document.getElementById("response-red");
+const $submit = document.getElementById("submit");
 
-function handleSubmit(event) {
+async function handleSubmit(event) {
   event.preventDefault();
+  console.log("hola como vas");
+  $submit.disabled = true;
+  $submit.style.opacity = ".5";
+  $submit.style.cursor = "await";
   const form = new FormData(this);
-  console.log(form.get("nombre"));
-  $ButtonMailto.setAttribute(
-    "href",
-    `mailto:morenoadrianh1.2@gmail.com?subject=Nombre:${form.get("nombre")} 
-    Email:${form.get("email")}&body=${form.get("mensaje")}`
-  );
-  $ButtonMailto.click();
+  const response = await fetch(this.action, {
+    method: this.method,
+    body: form,
+    headers: {
+      Accept: "application/json",
+    },
+  });
+  if (response.ok) {
+    this.reset();
+    $submit.style.opacity = "1";
+    $submit.disabled = false;
+    $submit.style.cursor = "pointer";
+    $green.style.display = "block";
+  }
+  if (!response.ok) {
+    $submit.style.opacity = "1";
+    $submit.disabled = false;
+    $submit.style.cursor = "pointer";
+    $red.style.display = "block";
+  }
 }

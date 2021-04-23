@@ -246,7 +246,7 @@
               <a
                 href="https://github.com/adrianmorenojh/playMovies"
                 target="_blank"
-                ><i class="fab fa-github-square proyect-icon"></i
+                ><i class="fab fa-github proyect-icon"></i
               ></a>
               <a href="https://playmovies.vercel.app/" target="_blank"
                 ><i class="fab fa-chrome proyect-icon"></i
@@ -279,19 +279,23 @@
             <a href="https://www.instagram.com/adrianmorenojh_/" target="_blank"
               ><i class="fab fa-instagram fab-contact"></i
             ></a>
-            <a href="https://github.com/adrianmorenojh" target="_blank">
-              <i class="fab fa-linkedin-in fab-contact"></i>
-            </a>
             <a
               href="https://www.linkedin.com/in/adrian-moreno-4087a21a8/"
               target="_blank"
             >
+              <i class="fab fa-linkedin-in fab-contact"></i>
+            </a>
+            <a href="https://github.com/adrianmorenojh" target="_blank">
               <i class="fab fa-github fab-contact"></i>
             </a>
           </div>
         </div>
         <div class="contact-message">
-          <form id="form" method="" action="">
+          <form
+            id="form"
+            action="https://formspree.io/f/xjvjklqk"
+            method="POST"
+          >
             <div class="input-data">
               <div class="input-container">
                 <input type="text" required id="contact-name" name="nombre" />
@@ -319,9 +323,16 @@
                 <span class="text-nomb">tu mensaje</span>
               </label>
             </div>
-            <button type="submit" value="" class="submit">Enviar</button>
+            <button type="submit" value="" id="submit" class="submit">
+              Enviar
+            </button>
           </form>
-          <a href="mailto:morenoadrianh1.2@gmail.com" id="ButtonMailto"></a>
+          <p class="response-message green" id="response-green">
+            El mensaje fue enviado con exito!
+          </p>
+          <p class="response-message red" id="response-red">
+            el mensaje no pudo ser enviado!
+          </p>
         </div>
       </div>
       <div class="button-cv--container">
