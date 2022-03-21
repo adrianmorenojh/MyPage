@@ -175,7 +175,7 @@ main {
   transition: 0.3s border-radius ease-in-out, 0.3s height ease-in-out;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: baseline;
   justify-content: center;
   top: 0;
   left: 0;
